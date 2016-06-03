@@ -19,3 +19,11 @@ WHERE id = :id
 -- :doc delete a user given the id
 DELETE FROM users
 WHERE id = :id
+
+-- :name add-message :! :n
+insert into guestbook
+  (guest, message)
+  values (:guest, :message)
+
+-- :name get-messages :? :*
+select * from guestbook
